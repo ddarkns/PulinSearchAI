@@ -33,38 +33,34 @@ Llama 3.3 versatile model for formatting the final answer.
 * UV package manager
 
 ### Frontend
-* **Framework**: Next.js 14+ (App Router)
-* **Styling**: Tailwind CSS
-* **Icons**: Lucide React
+*  Next.js 14+ (App Router)
+*  Tailwind CSS
+*  Lucide React
 
 ---
 
 ## 📸 Project Gallery
 
-> *Add your screenshots here to showcase the UI*
-
-| Search Interface | Generated Report |
-| :--- | :--- |
-| ![Search UI](https://via.placeholder.com/400x250?text=Search+Interface+Screenshot) | ![Report UI](https://via.placeholder.com/400x250?text=Final+Report+Screenshot) |
+will add photos here later
 
 ---
 
 ## ⚙️ Setup & Installation
 
 ### Prerequisites
-* **uv** installed (faster Python package management).
-* **Ollama** installed and running locally.
-* **Node.js** and **npm** for the frontend.
+* Install **UV** package manager (faster than pip)
+* **Ollama** for running local LLM models
+* **Node.js** and **npm** for the frontend
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/yourusername/pulinsearch-ai.git](https://github.com/yourusername/pulinsearch-ai.git)
-cd pulinsearch-ai
+git clone (https://github.com/ddarkns/PulinSearchAI)
+cd PulinSearchAI
 ```
 
 ### 2. Create a .env file in the root directory:
 ```bash
-TAVILY_API_KEY=your_tavily_key
+TAVILY_API_KEY=your_tavily_key 
 GROQ_API_KEY=your_groq_key
 ```
 ### 3. backend setup
