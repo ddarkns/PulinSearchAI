@@ -10,14 +10,14 @@ Llama 3.3 versatile model for formatting the final answer.
 ---
 
 ## Features:-
-
-* **Hybrid Search Engine**: Combines **Semantic Search (70%)** for intent and **BM25 Keyword Matching (30%)** for technical terms and exact matches.
+* **Web Searching and Web Scraping**: Parallel scraping using `Tavily API` and `Trafilatura` for clean, noise-free text extraction.
+* **Hybrid Search Techniques**: Combines **Semantic Search (70%)** for intent and **BM25 Keyword Matching (30%)** for technical terms and exact matches.
 * **Intelligent Chunking**: Utilizes **Statistical Chunking** to break down web content into contextually meaningful pieces rather than arbitrary character counts.
+* **Similarity Re-ranking**: Scores and sorts search results to ensure only the most relevant context is fed to the LLM.
 * **Dual-LLM Pipeline**:
     * **Local Research**: Uses `Qwen3:8b` (via Ollama) to extract granular facts locally, ensuring data processing efficiency.
     * **Cloud Synthesis**: Uses `Llama-3.3-70b-versatile` (via Groq) for high-speed, high-quality report generation.
-* **Automated Web Scraping**: Parallel scraping using `Tavily API` and `Trafilatura` for clean, noise-free text extraction.
-* **Similarity Re-ranking**: Scores and sorts search results to ensure only the most relevant context is fed to the LLM.
+
 
 ---
 
