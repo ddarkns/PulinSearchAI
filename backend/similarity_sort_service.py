@@ -7,8 +7,6 @@ from rank_bm25 import BM25Okapi
 
 class SimilaritySortService:
     def __init__(self):
-        # 1. Setup the semantic encoder (all-miniLM)
-        # Using the capital 'F' version as we found earlier
         try:
             from semantic_router.encoders import HuggingFaceEncoder
         except ImportError:
@@ -16,12 +14,11 @@ class SimilaritySortService:
             
         self.encoder = HuggingFaceEncoder(name="sentence-transformers/all-miniLM-L6-v2")
         
-        # 2. Setup the Statistical Chunker
         self.chunker = StatisticalChunker(encoder=self.encoder)
         
-        # 3. Tuning parameters
+
         self.semantic_threshold = 0.3
-        self.hybrid_threshold = 0.25  # Lower threshold for hybrid to allow keyword boosts
+        self.hybrid_threshold = 0.25  
 
     def _get_bm25_scores(self, query: str, chunk_texts: List[str]) -> np.ndarray:
         """Calculates BM25 keyword relevance scores for a list of chunks."""
@@ -34,7 +31,6 @@ class SimilaritySortService:
         bm25 = BM25Okapi(tokenized_corpus)
         scores = bm25.get_scores(tokenized_query)
         
-        # Normalize scores to a 0-1 range roughly (BM25 can be > 1)
         if len(scores) > 0 and np.max(scores) > 0:
             return scores / np.max(scores)
         return scores
@@ -47,7 +43,7 @@ class SimilaritySortService:
             if not content:
                 continue
             
-            # Use Statistical Chunker to find thematic boundaries
+
             doc_chunks = self.chunker(docs=[content])[0]
             
             for chunk in doc_chunks:

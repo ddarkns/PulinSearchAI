@@ -5,4 +5,4 @@ load_dotenv()
 
 class Settings(BaseSettings):
     TAVILY_API_KEY: str = ""
-    OPENROUTER_API_KEY: str = ''
+    GROQ_API_KEY: str = ''

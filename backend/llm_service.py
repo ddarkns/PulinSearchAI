@@ -10,7 +10,7 @@ settings = Settings()
 
 class LLMService:
     def __init__(self):
-        # STAGE 1: Qwen3 8B (Optimized for 8GB VRAM)
+       
         self.research_llm = ChatOllama(
             model="qwen3:8b", 
             temperature=0.1,
@@ -18,10 +18,10 @@ class LLMService:
             num_gpu=35 
         )
 
-        # STAGE 2: Groq Llama 3.3 70B
+   
         self.synthesis_llm = ChatGroq(
             model="llama-3.3-70b-versatile",
-            api_key=os.environ.get("GROQ_API_KEY"),
+            api_key=settings.GROQ_API_KEY,
             temperature=0.2
         )
 

@@ -1,5 +1,5 @@
 import asyncio
-import time  # NEW: For benchmarking
+import time 
 from fastapi import FastAPI
 from pydantic import BaseModel
 from similarity_sort_service import SimilaritySortService
@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # For dev only
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -29,25 +29,24 @@ def welcome():
 async def normal_search(body: ChatBody):
     start_total = time.perf_counter()
 
-    # 1. Scraping Phase
     t0 = time.perf_counter()
     search_results = await search_service.web_search(body.query)
     t1 = time.perf_counter()
     print(f"[LOG] Scraping Phase: {t1 - t0:.2f}s")
 
-    # 2. Sorting Phase
+
     t0 = time.perf_counter()
     sorted_results = sort_service.sort_sources(body.query, search_results)
     t1 = time.perf_counter()
     print(f"[LOG] Sorting Phase: {t1 - t0:.2f}s")
 
-    # 3. LLM Research (Qwen3)
+
     t0 = time.perf_counter()
     raw_facts = await llm_service.generate_response(body.query, sorted_results)
     t1 = time.perf_counter()
     print(f"[LOG] LLM Research (Local): {t1 - t0:.2f}s")
 
-    # 4. LLM Synthesis (Groq)
+
     t0 = time.perf_counter()
     final_response = await llm_service.final_answer(raw_facts, body.query)
     t1 = time.perf_counter()
