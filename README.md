@@ -4,10 +4,8 @@
 [![Groq](https://img.shields.io/badge/Cloud_LLM-Groq-f55036?style=flat-square)](https://groq.com/)
 [![Ollama](https://img.shields.io/badge/Local_LLM-Ollama-white?style=flat-square&logo=ollama&logoColor=black)](https://ollama.com/)
 [![Pydantic](https://img.shields.io/badge/Validation-Pydantic-e92063?style=flat-square&logo=pydantic&logoColor=white)](https://docs.pydantic.dev/)
-[![uv](https://img.shields.io/badge/Package_Manager-uv-de5fe9?style=flat-square&logo=python&logoColor=white)](https://github.com/astral-sh/uv)
-
 [![Next.js](https://img.shields.io/badge/Frontend-Next.js%2014-000000?style=flat-square&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+
 
 **PulinSearch** is basicly a perplexity-like AI chatbot for searching. This mini-project uses a hybrid retrieval strategy by combining keyword-based matching (BM25) and semantic meaning of sentences (vector embeddings). Therefore providing a more context aware answer than a normal search query
 
