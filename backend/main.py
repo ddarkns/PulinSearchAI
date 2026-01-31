@@ -5,9 +5,15 @@ from pydantic import BaseModel
 from similarity_sort_service import SimilaritySortService
 from search_service import SearchService
 from llm_service import LLMService
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # For dev only
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 search_service = SearchService()
 sort_service = SimilaritySortService()
 llm_service = LLMService()
