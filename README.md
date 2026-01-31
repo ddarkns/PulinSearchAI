@@ -9,7 +9,7 @@ Llama 3.3 versatile model for formatting the final answer.
 
 ---
 
-## 🚀 Features
+## Features:-
 
 * **Hybrid Search Engine**: Combines **Semantic Search (70%)** for intent and **BM25 Keyword Matching (30%)** for technical terms and exact matches.
 * **Intelligent Chunking**: Utilizes **Statistical Chunking** to break down web content into contextually meaningful pieces rather than arbitrary character counts.
@@ -21,7 +21,7 @@ Llama 3.3 versatile model for formatting the final answer.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack:-
 
 ### Backend
 *  FastAPI (Python) for backend 
@@ -39,13 +39,13 @@ Llama 3.3 versatile model for formatting the final answer.
 
 ---
 
-## 📸 Project Gallery
+## Project Preview:-
 
 will add photos here later
 
 ---
 
-## ⚙️ Setup & Installation
+## How To Install:-
 
 ### Prerequisites
 * Install **UV** package manager (faster than pip)
