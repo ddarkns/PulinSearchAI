@@ -9,7 +9,7 @@
 [![Next.js](https://img.shields.io/badge/Frontend-Next.js%2014-000000?style=flat-square&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-**PulinSearch** is basicly a perplexity-like AI based chatbot. This mini-project uses a hybrid retrieval strategy by combining keyword-based matching (BM25) and semantic meaning of sentences (vector embeddings). Therefore providing a more context aware answer than a normal search query
+**PulinSearch** is basicly a perplexity-like AI chatbot for searching. This mini-project uses a hybrid retrieval strategy by combining keyword-based matching (BM25) and semantic meaning of sentences (vector embeddings). Therefore providing a more context aware answer than a normal search query
 
 Then finally to curate a answer for the users query a dual LLM architure is used , where  Qwen3 8B local model for extracting the relevant facts from the given context and
 Llama 3.3 versatile model for formatting the final answer.
